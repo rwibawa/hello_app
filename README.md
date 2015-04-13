@@ -43,3 +43,8 @@ Commands:
    $ bundle exec rake test
    $ git push heroku
    $ heroku run rake db:migrate
+
+10. Empty the db
+
+   $ bundle exec rake db:migrate:reset
+   
