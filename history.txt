@@ -1,0 +1,119 @@
+    1  cd hello_app/
+    2  bundle install
+    3  git status
+    4  git -am "omniauth-facebook"
+    5  git commit -am "omniauth-facebook"
+    6  git status
+    7  git add -A
+    8  git status
+    9  git commit -m "Add fb credential"
+   10  git co -b static-pages
+   11  rails g controller StaticPages home help
+   12  git branch
+   13  git status
+   14  git add -A
+   15  git commit -am "Add StaticPages controller"
+   16  git push -u origin static-pages
+   17  bundle exec rake test
+   18  foreman -v
+   19  ls 
+   20  bundle exec rake test
+   21  touch app/views/static_pages/about.htlml.erb
+   22  bundle exec rake test
+   23  mv app/views/static_pages/about.htlml.erb app/views/static_pages/about.html.erb 
+   24  bundle exec rake test
+   25  mv app/views/layouts/application.html.erb app/views/layouts/layout_file
+   26  bundle exec rake test
+   27  mv app/views/layouts/layout_file app/views/layouts/application.html.erb
+   28  bundle exec rake test
+   29  git status
+   30  git add -A
+   31  git commit -m "Finish static pages"
+   32  git status
+   33  git push
+   34  git co master
+   35  git merge static-pages 
+   36  git status
+   37  git push
+   38  git push heroku
+   39  irb
+   40  git co static-pages 
+   41  bundle exec rake test
+   42  rails g StaticPages contact
+   43  rails g --help
+   44  rails g controller StaticPages contact
+   45  bundle exec rake test
+   46  git status
+   47  git add -A
+   48  git commit -m "Add Contact page"
+   49  git status
+   50  bundle exec rake test
+   51  bundle install --without production
+   52  bundle exec rake test
+   53  git status
+   54  git commit -m "Add minitest-reporters"
+   55  git push
+   56  git commit -m "Add minitest-reporters"
+   57  git add -A
+   58  git status
+   59  git commit -m "Add minitest-reporters"
+   60  git push
+   61  git co master
+   62  git merge static-pages 
+   63  git status
+   64  git branch
+   65  git co static-pages 
+   66  bundle exec guard init
+   67  git status
+   68  git commit -am "Automated tests with Guard"
+   69  git status
+   70  git add -A
+   71  git commit --amend
+   72  git status
+   73  git push
+   74  git co master
+   75  git merge static-pages 
+   76  git status
+   77  git push
+   78  git co static-pages 
+   79  touch ~/.irbrc
+   80  nano ~/.irbrc
+   81  irb
+   82  cd hello_app/
+   83  rails s -b $IP -p $PORT
+   84  rails g -h
+   85  rails job -h
+   86  rails g job -h
+   87  rails g integration_test site_layout -p
+   88  rails g integration_test site_layout
+   89  bundle exec rake test
+   90  bundle exec rake test:integration
+   91  rails s -b $IP -p $PORT
+   92  rails g controller Users new -p
+   93  rails g controller Users new
+   94  bundle exec rake test
+   95  git status
+   96  git add -A
+   97  git status
+   98  git commit -m "Finish layout and routes"
+   99  git push
+  100  rvm -v
+  101  which ruby
+  102  ruby -v
+  103  rvm list
+  104  git status
+  105  git push
+  106  git co master
+  107  git merge filling-in-layout 
+  108  git status
+  109  git push
+  110  git branch
+  111  git co -b modeling-users
+  112  rails g model Users name:string email:string -p
+  113  rails g model User name:string email:string
+  114  bundle rake db:migrate
+  115  bundle exec rake db:migrate
+  116  rails c --sandbox
+  117  history
+  118  pwd
+  119  history > history.txt
